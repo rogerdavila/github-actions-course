@@ -22,4 +22,4 @@ jobs:
     needs: ["run-shell-command"]
     steps:
       - name: Directory
-      - run: pwd
+        run: pwd
