@@ -6,12 +6,18 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
-      - name: List Files
+      - name: Manual Checkout
         run: |
           pwd
           ls -a
-      - name: Checkout
-        uses: actions/checkout@v1
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          echo "${{ github.token }}"
+          git clone  git@github:$GITHUB_REPOSITORY
+          git checkout $GITHUB_SHA
+      #- name: Checkout
+      #  uses: actions/checkout@v1
       - name: List Files
         run: |
           pwd
