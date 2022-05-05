@@ -17,3 +17,9 @@ jobs:
           import platform
           print (platform.processor())
         shell: python
+  run-another-shell-command:
+    runs-on: ubuntu-latest
+    needs: ["run-shell-command"]
+    steps:
+      - name: Directory
+      - run: pwd
