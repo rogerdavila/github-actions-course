@@ -4,7 +4,6 @@ on: push
 jobs:
   functions:
     runs-on: ubuntu-latest
-    description: Test a set of available functions
     steps:
       - name: dump
         run: |
