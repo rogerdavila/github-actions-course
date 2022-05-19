@@ -1,0 +1,6 @@
+Para subir archivos encriptados:
+- Se instala gpg
+- Encriptar el archivo con gpg: gpg --symmetric --cipher-algo AES256 file.json
+- Se va a solicitar un passphrase, se coloca y se guarda este como secret.
+- El archivo que se subirá al repositorio es el .gpg
+- Ver el job "decrypt" de env.yml
