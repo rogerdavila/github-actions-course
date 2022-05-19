@@ -5,6 +5,7 @@ on: [push]
 jobs: 
   run-shell-command:
     runs-on: ubuntu-latest
+    timeout-minutes: 360 # Maximum number of minutes your job can take
     steps:
       - name: echo a string
         run: eccho "Hello World"
